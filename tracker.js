@@ -80,7 +80,9 @@ if (typeof document !== 'undefined' && document.getElementById('activity-tracker
       cell.addEventListener('click', () => { grid.querySelectorAll('button').forEach(item => item.tabIndex = -1); cell.tabIndex = 0; show(); });
       grid.append(cell);
       const month = date.slice(0, 7);
-      if (month !== previousMonth && (index > 0 || Number(date.slice(8)) < 20)) {
+      const newMonth = month !== previousMonth;
+      previousMonth = month;
+      if (newMonth && (index > 0 || Number(date.slice(8)) < 20)) {
         const label = document.createElement('span');
         label.textContent = new Date(date + 'T00:00:00Z').toLocaleDateString(undefined, { month: 'short', timeZone: 'UTC' });
         const week = Math.floor((offset + index) / 7);
