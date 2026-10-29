@@ -22,9 +22,9 @@ if (typeof document !== 'undefined' && document.getElementById('activity-tracker
   const grid = document.getElementById('activity-grid');
   const status = document.getElementById('activity-status');
   const retry = document.getElementById('tracker-retry');
-  const filters = [...document.querySelectorAll('[data-platform]')];
   const detail = document.getElementById('calendar-detail');
-  let payload = null, selected = 'combined';
+  let payload = null;
+  const selected = 'combined';
   const friendly = date => new Date(date + 'T00:00:00Z').toLocaleDateString(undefined, { timeZone: 'UTC', month: 'short', day: 'numeric', year: 'numeric' });
   function render() {
     if (!payload) return;
@@ -104,11 +104,6 @@ if (typeof document !== 'undefined' && document.getElementById('activity-tracker
     const target = cells[Math.max(0, Math.min(cells.length - 1, index + move))];
     cells[index].tabIndex = -1; target.tabIndex = 0; target.focus();
   });
-  filters.forEach(button => button.addEventListener('click', () => {
-    selected = button.dataset.platform;
-    filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    render();
-  }));
   async function load() {
     retry.disabled = true; grid.setAttribute('aria-busy', 'true');
     status.textContent = 'Loading public activity from GitHub, LeetCode, and Codeforces…';
