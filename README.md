@@ -1,12 +1,13 @@
-# Aaditya Yadav · AI / ML Portfolio
+# Aaditya Yadav · AI/ML Engineer & Researcher
 
-My personal portfolio showcasing applied AI, machine learning, agentic systems, and competitive programming.
+My portfolio covers applied AI engineering and independent research in optimization and Bayesian decision-making.
 
 **Live portfolio: [aaditya-ai-portfolio.vercel.app](https://aaditya-ai-portfolio.vercel.app/)**
 
 ## Featured work
 
-- **EduPulse:** Academic performance analysis using K-Means and Gradient Boosting, with a stateful RAG tutor built with LangGraph, Hugging Face embeddings, ChromaDB, and Groq.
+- **[LoopAlpha](https://github.com/aaditya599fx/loopalpha)** — PyTorch research on per-pass gradients and optimizer performance.
+- **[BayesTrade](https://github.com/aaditya599fx/BayesTrade)** — Bayesian execution research with a synthetic market simulator and paired benchmarks. [Research paper](https://github.com/aaditya599fx/BayesTrade/releases/tag/v1.0.0).
 - **Nexus Research:** A research assistant combining classical NLP, multi-source retrieval, and an autonomous LangGraph workflow.
 
 ## Features
